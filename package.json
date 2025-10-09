@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "naive-ui": "^2.43.1"
+  },
+  "devDependencies": {
+    "unplugin-auto-import": "^20.2.0",
+    "unplugin-vue-components": "^29.1.0"
+  }
+}
