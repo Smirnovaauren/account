@@ -1,43 +1,74 @@
 <script setup>
-import { ref } from 'vue'
 
 defineProps({
-  msg: String,
 })
 
-const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <n-card class="account-card" size="large">
+    <template #header>
+      <div class="account-card__header">
+        <h1 class="account-card__title">Учетные записи</h1>
+      </div>
+    </template>
+    <section class="account-card__item">
+      <header class="account-item__header">
+        <div class="account-item__title">
+          <span class="account-item__index">1.</span>
+          <span>Учетная запись</span>
+        </div>
+        <n-button type="error" quaternary circle>
+          <span aria-hidden="true" class="account-card__remove-icon">×</span>
+        </n-button>
+      </header>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
+      <div class="account-item__body">
+        <n-form label-placement="top" :show-require-mark="false">
+          <div class="account-item__grid">
+            <n-form-item
+                label="Метка"
+            >
+              <n-input
+                  placeholder="например: основная; админ"
+                  maxlength="50"
+                  show-count
+              />
+            </n-form-item>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Learn more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+            <n-form-item
+                label="Тип записи *"
+            >
+              <n-select
+                  placeholder="Выберите тип"
+              />
+            </n-form-item>
+
+            <n-form-item
+                label="Логин *"
+            >
+              <n-input
+                  placeholder="Введите логин"
+                  maxlength="100"
+              />
+            </n-form-item>
+
+            <n-form-item
+                label="Пароль *"
+            >
+              <n-input
+                  type="password"
+                  placeholder="Введите пароль"
+                  maxlength="100"
+              />
+            </n-form-item>
+          </div>
+        </n-form>
+      </div>
+    </section>
+  </n-card>
 </template>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
-}
+
 </style>
