@@ -1,0 +1,4 @@
+// tsconfig.json
+{
+  "include": ["src/**/*.ts", "src/**/*.vue", "src/**/*.d.ts"]
+}

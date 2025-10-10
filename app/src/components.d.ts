@@ -8,14 +8,12 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    NAlert: typeof import('naive-ui')['NAlert']
     NButton: typeof import('naive-ui')['NButton']
     NCard: typeof import('naive-ui')['NCard']
     NForm: typeof import('naive-ui')['NForm']
     NFormItem: typeof import('naive-ui')['NFormItem']
     NInput: typeof import('naive-ui')['NInput']
     NSelect: typeof import('naive-ui')['NSelect']
-    NSpace: typeof import('naive-ui')['NSpace']
     Table: typeof import('./components/Table.vue')['default']
   }
 }

@@ -1,9 +1,11 @@
-<script setup>
-import HelloWorld from './components/Table.vue'
+<script setup lang="ts">
+import AccountTable from './components/Table.vue'
 </script>
 
 <template>
-  <Table msg="Vite + Vue" />
+  <main class="app-layout">
+    <AccountTable />
+  </main>
 </template>
 
 <style scoped>

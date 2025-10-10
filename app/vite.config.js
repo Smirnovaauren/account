@@ -9,9 +9,10 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ['vue'], // Авто-импорт из 'vue': ref, reactive, computed, onMounted и т.д. — писать import больше не надо.
+      imports: ['vue', 'pinia'], // Авто-импорт из 'vue': ref, reactive, computed, onMounted и  defineStore, storeToRefs и т.п. тоже авто-импортятся, писать import больше не надо.
       resolvers: [NaiveUiResolver()], // Плюс подтянет useMessage/useDialog/useNotification/useLoadingBar из Naive UI по мере использования.
-      dts: 'src/auto-imports.d.ts', // Генерит .d.ts с типами для IDE, чтобы подсказки работали и ошибок не было.
+      eslintrc: { enabled: true, filepath: './.eslintrc-auto-import.json', globalsPropValue: true }, // чтобы ESLint не орал на "no-undef"
+      //dts: 'src/auto-imports.d.ts', // Генерит .d.ts с типами для IDE, чтобы подсказки работали и ошибок не было.
     }),
     Components({
       resolvers: [NaiveUiResolver()], // Встречает <n-button/> в шаблоне — сам добавляет импорт NButton из 'naive-ui'.

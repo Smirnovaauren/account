@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "naive-ui": "^2.43.1"
+    "naive-ui": "^2.43.1",
+    "pinia": "^3.0.3"
   },
   "devDependencies": {
     "unplugin-auto-import": "^20.2.0",
