@@ -19,3 +19,7 @@ Cтавим пакеты для ui
 npm i naive-ui
 npm i -D unplugin-vue-components unplugin-auto-import
 ```
+добавляем pinia
+```bash
+npm install pinia
+```
